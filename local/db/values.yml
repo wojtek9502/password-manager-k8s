@@ -1,0 +1,10 @@
+---
+primary:
+  persistence:
+    enabled: true
+    size: 5Gi
+auth:
+  username: "admin"
+  database: "password-manager"
+  postgresPassword: "admin"
+  password: "admin"
