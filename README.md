@@ -1,4 +1,6 @@
 # password-manager-k8s
+Deploy Password Manager locally with Minikube  
+Password Manager repo: https://github.com/wojtek9502/password-manager
 
 1. Install minikube
 ```sh
