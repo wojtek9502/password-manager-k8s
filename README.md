@@ -1,7 +1,5 @@
 # password-manager-k8s
 
-
-@TODO describe minikube install and run
 1. Install minikube
 ```sh
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
