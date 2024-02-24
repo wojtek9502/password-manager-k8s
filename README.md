@@ -40,3 +40,8 @@ kubectl get svc -A | grep password-manager-svc
 <MINIKUBE_IP>:<EXTERNAL_PORT>/swagger-ui
 ```
 Example: http://192.168.49.2:32034/swagger-ui
+
+5. To remove local deploy:
+```shell
+make remove-local
+```
