@@ -23,9 +23,9 @@ helm install password-manager-db --version 11.8.1 bitnami/postgresql --namespace
 1. Config files
 - Create file 'password-manager-api-configmaps.yml' in 'local' dir, see 'local/password-manager-api-configmaps.yml.example'
 
-2. Deploy locally
+2. Deploy on your local machine
 ```sh
-deploy-local
+make deploy-local
 ```
 
 3. Get cluster ip from minikube and get app port
