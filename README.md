@@ -2,7 +2,7 @@
 
 
 @TODO describe minikube install and run
-1. Install minikube and start cluster
+1. Install minikube
 ```sh
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
@@ -23,22 +23,20 @@ helm install password-manager-db --version 11.8.1 bitnami/postgresql --namespace
 1. Config files
 - Create file 'password-manager-api-configmaps.yml' in 'local' dir, see 'local/password-manager-api-configmaps.yml.example'
 
-2. Deploy
+2. Deploy locally
 ```sh
-kubectl apply -f local/password-manager-ns.yml
-kubectl apply -f local/password-manager-api-configmaps.yml
-kubectl apply -f local/password-manager-api-deployment.yml
-kubectl apply -f local/password-manager-api-hpa.yml
-kubectl apply -f local/password-manager-api-svc.yml
+deploy-local
 ```
 
-3. Get public IP for created services (see  EXTERNAL-IP)
+3. Get cluster ip from minikube and get app port
 ```sh
-kubectl get svc -n password-manager
+minikube ip
+kubectl get svc -A | grep password-manager-svc
 ```
+![img.png](kubectl-service-image.png)
 
 4. Go to 
 ```
-<EXTERNAL-IP>/swagger-ui
+<MINIKUBE_IP>:<EXTERNAL_PORT>/swagger-ui
 ```
-Example: http://172.212.12.220/swagger-ui
+Example: http://192.168.49.2:32034/swagger-ui
