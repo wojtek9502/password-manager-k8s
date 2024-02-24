@@ -33,7 +33,11 @@ deploy-local
 minikube ip
 kubectl get svc -A | grep password-manager-svc
 ```
-![img.png](kubectl-service-image.png)
+'get svc' command example:   
+password-manager   password-manager-svc                NodePort    10.100.243.55    <none>        8080:**32036**/TCP           11h  
+External port: 32036
+
+
 
 4. Go to 
 ```
